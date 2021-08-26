@@ -1,0 +1,155 @@
+*{
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body{
+    width: 1060px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* le header*/
+
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h3{
+    margin-left: 1.5rem;
+    color: rgb(114, 138, 11);
+}
+
+header{
+    background-image: url('../images/Stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0rem 0rem 2rem 2rem;
+    padding-bottom: 13.5rem;
+    padding-top: 2rem;
+}
+/*header section:first-child input {
+    display: none;
+}*/
+
+header .first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .first-child img{
+    height: 100px;
+    margin-left: 1rem;
+}
+
+header .first-child nav{
+    width: 20%;
+    color:#ecc400;  
+}
+
+header .first-child nav ul{
+    display: flex;
+    justify-content: space-around; 
+    list-style: none;
+    
+}
+header .first-child nav ul li a{
+    color: #ecc400; 
+    text-decoration: none;
+    }
+
+header .first-child nav ul li a i {
+    font-size: 25px;
+
+}    
+
+header .last-child{
+    flex-direction: column;
+    text-align: center;
+    font-style: italic;
+    margin: 14em auto 0;
+    background-color: rgba(255,255,255,0.3);
+    padding: 30px;
+    width: 60%;
+    color: rgb(114, 138, 11);
+}
+header .last-child p {
+    color: rgb(12, 1, 49);
+    text-transform:uppercase;   
+}
+
+/*le main - les premiers articles*/ 
+main .Stock h2{
+    text-align: center;
+    
+}
+
+main .moinsConnu article{
+    width: calc(100%/3 - 20px);
+    display: inline-block;
+}
+
+main .moinsConnu article img{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+/*DIAPORAMA*/
+
+main h2{
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(114, 138, 11);
+}
+
+main .diaporama{
+    height: calc(75vw * 1280 / 1920);
+    width: 75vw;
+    max-height: calc(960px * 1280 / 1920);
+    max-width: 960px;
+    margin: 25px;
+    border: 10px solid rgb(128, 161, 7);
+    box-shadow: 0 0 7px 7px rgb(36, 9, 131);
+    background: rgb(59, 147, 173);
+    position: relative;
+
+}
+
+ main .diaporama img{
+    
+     height: 618px;
+     position:absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+ }
+
+ main .diaporama img.visible{
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 1;
+ }
+
+/*le main - le deuxième article*/
+
+main .Nouveaute article{
+    width: calc(100%/3 - 20px);
+    display: inline-block;
+}
+
+
+main .Nouveaute article img{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+
+
+
+
+
