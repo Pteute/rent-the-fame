@@ -1,21 +1,122 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
+{% block title %}Bienvenu sur Rent the Fame{% endblock %}
+{% block javascripts %}
+<script src="{{ asset("js/home.js") }}"></script>
+    {# {{ encore_entry_script_tags('app') }} #}
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+</head>
+<body>
+    <!-- 1ere section du header -->
+    <header>         
+            <section class="first-child">
+                <img src="{{asset("images/logo-star.png") }}" alt="logo">
+            
+                <nav> 
+                        <ul>
+                            <li><a href="#"><i class="fas fa-user"></i></a></li>
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-cart-plus"></i></a></li>
+                        </ul>
+                </nav>
+            </section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <!-- 2em section du header -->
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Tiffany/Documents/06-TRAVAIL/Baseprojets/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Tiffany/Documents/06-TRAVAIL/Baseprojets/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
-<div id="root"> </div>
+            <section class="last-child"> 
+                <h1>Rent the Fame</h1>
+                        <p>Ce que fait le site - Louer des stars depuis 100 ans !!</p>
+            </section>
+    </header>
+
+    <main id="home"> 
+
+<!--1er section du main-->
+            <section class="Stock">
+                <h2>Nos produits en stock</h2>
+            </section>
+<!--2é section du main-->
+            <section class="moinsConnu">
+                <article>
+                    <div>
+                        <h3>Moins connus</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem consequuntur tenetur, accusantium    doloremque animi nobis maxime atque provident, saepe   totam
+                    </div>
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+                </article>
+
+                <article>
+                    <div>
+                        <h3>Connus</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem consequuntur tenetur, cusantium    doloremque animi nobis maxime atque provident, saepe   totam s
+                    </div>
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">             
+                </article>
+
+                <article>
+                    <div>
+                        <h3>Plus connus</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem consequuntur tenetur, accusantium   doloremque animi nobis maxime atque provident, saepe   totam s
+                    </div>
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+                </article>
+            </section>
+
+                <h2>Galerie des Stars - les Top vente !</h2>
+
+                <section class="diaporama">
+                    <img class="visible" src="{{asset("images/stars/JuliaRobert.jpg") }}" alt="julia Robert">
+                    <img src="{{asset("images/stars/actric4jpg.jpg") }}" alt="actrice4">
+                    <img src="{{asset("images/stars/will-smith.jpg") }}" alt="Will Smith">
+                    <img src="{{asset("images/stars/actrice2.jpg") }}" alt="actrice2">
+                    <img src="{{asset("images/stars/Dicaprio.jpg") }}" alt="Dicaprio">
+                    <img src="{{asset("images/stars/jeanDuJardin.jpg") }}" alt="Jean du Jardin">
+                    <img src="{{asset("images/stars/KitHarrington2.jpg") }}" alt="Kit Harrington">
+                    <img src="{{asset("images/stars/jeuderLaw.webp") }}" alt="Jeuder Law">
+                </section>
+
+<!--3é section du main-->
+            
+            <section class="Nouveaute">
+                <article>
+                    <div>
+                        <h3>Notre nouveauté</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem 
+                            consequuntur tenetur, accusantium doloremque animi nobis maxime atque 
+                            
+                    </div>
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+                </article>
+
+                <article>
+                    <div>
+                        <h3>Notre Best Sellers</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem 
+                            consequuntur tenetur, cusantium  oloremque animi nobis maxime atque 
+                            
+                    </div>
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">             
+                </article>
+
+                <article>
+                    <div>
+                        <h3>Notre coup de coeur</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem 
+                            consequuntur tenetur, accusantium   doloremque animi nobis maxime atque
+                            
+                    </div>
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+                </article>
+            </section>
+
+<!--fin du main-->                                
+    </main>   
+<!--footer-->
+
+    
+
+    
+
+
 {% endblock %}
