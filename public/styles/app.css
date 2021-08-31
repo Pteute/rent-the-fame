@@ -29,6 +29,7 @@ header{
     border-radius: 0rem 0rem 2rem 2rem;
     padding-bottom: 13.5rem;
     padding-top: 2rem;
+    margin-top: 2rem;
 }
 /*header section:first-child input {
     display: none;
@@ -71,25 +72,30 @@ header .last-child{
     text-align: center;
     font-style: italic;
     margin: 14em auto 0;
-    background-color: rgba(255,255,255,0.3);
-    padding: 30px;
+    padding: 20px;
     width: 60%;
     color: rgb(114, 138, 11);
 }
-header .last-child p {
-    color: rgb(12, 1, 49);
-    text-transform:uppercase;   
+
+header .last-child p{
+    color: rgb(92, 3, 11);
+    text-transform:uppercase;
+    font-size: 18px;  
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 1.5rem;
+    text-align: justify;    
 }
 
-/*le main - les premiers articles*/ 
+/*LE MAIN - les premiers articles*/ 
 main .Stock h2{
     text-align: center;
     
 }
 
 main .moinsConnu article{
-    width: calc(100%/3 - 20px);
+    width: calc(100%/3 - 4px);
     display: inline-block;
+    text-align: left;
 }
 
 main .moinsConnu article img{
@@ -97,7 +103,7 @@ main .moinsConnu article img{
     border-radius: 2rem;
 }
 
-/*DIAPORAMA*/
+/* LE MAIN - DIAPORAMA*/
 
 main h2{
     text-align: center;
@@ -135,21 +141,89 @@ main .diaporama{
      opacity: 1;
  }
 
-/*le main - le deuxième article*/
+/*LE MAIN - le deuxième article*/
 
 main .Nouveaute article{
-    width: calc(100%/3 - 20px);
+    width: calc(100%/3 - 4px);
     display: inline-block;
+    text-align: left;
 }
 
 
 main .Nouveaute article img{
     width: 100%;
-    border-radius: 2rem;
+    border-radius: 2rem 2rem 0rem 0rem;
 }
 
 
+/* LE FOOTER*/
 
+.inner_footer{
+    margin: 0;
+    padding: 0;
+    background: rgb(59, 147, 173);
+}
 
+.social_links{
+    display: flex;
+}
+ .social_links ul{
+    padding: 10px;
+    display: flex;
+    width: 300px;
+    height: 30px;
+    margin: auto;  
+ }
 
+  .social_items{
+    list-style: none;
+ }
 
+ .social_items a{
+    padding: 10px 20px;
+    font-size: 20px; 
+    color: #ecc400;
+    transition: all .25s;  
+ }
+
+ .social_items a:hover{
+     color: rgb(192, 223, 233);
+ }
+ 
+.quick_links{
+    display: flex;
+    width: 560px;
+    height: 70px;
+    margin: auto;
+}
+
+.quick_links ul{
+    display: flex;
+}
+
+.quick_items{
+    list-style: none;
+}
+
+.quick_items a{
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 16px;
+    color: #ecc400;
+    transition: all .25s; 
+
+}
+
+.quick_items a:hover{
+    color: rgb(192, 223, 233);
+
+}
+
+.outer_footer{
+    padding: 10px;
+    text-align: center;
+    color: #ecc400; 
+    font-size: 18px;
+    background: rgb(5, 60, 75);
+    
+}
