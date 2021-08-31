@@ -34,30 +34,31 @@
 
 <!--1er section du main-->
             <section class="Stock">
-                <h2>Nos produits en stock</h2>
+                <h2>Quand le rêve rejoint la réalité...</h2>
             </section>
 <!--2é section du main-->
             <section class="moinsConnu">
                 <article>
                     <div>
-                        <h3>Moins connus</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem consequuntur tenetur, accusantium    doloremque animi nobis maxime atque provident, saepe   totam
+                        <h3>Les moins connues</h3>
+                            <p>Vous préférez les stars en début de carrière. Faites de cette rencontre une expérience inoubliable aussi bien pour vous que pour elle en écrivant une page de sa future carrière de people.   
                     </div>
-                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+                    <img src="{{asset("images/Stars.jpg") }}" alt="star">            
                 </article>
 
                 <article>
                     <div>
-                        <h3>Connus</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem consequuntur tenetur, cusantium    doloremque animi nobis maxime atque provident, saepe   totam s
-                    </div>
+                        <h3>Les connues</h3>
+                            <p>Célébrités d'ici et d'ailleurs, mais l'embarras du choix ne vous fait pas peur! Découvrez notre liste de personnalités du moment et passez enfin la journée de vos rêves.                                 
+                     </div>
+                     
                     <img src="{{asset("images/Stars.jpg") }}" alt="star">             
                 </article>
 
                 <article>
                     <div>
-                        <h3>Plus connus</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem consequuntur tenetur, accusantium   doloremque animi nobis maxime atque provident, saepe   totam s
+                        <h3>Les plus connues</h3>
+                            <p>On les apprécie pour leur charisme et leur personnalité, mais aussi parce qu'elles font le buzz! Rencontrez cette star que vous suivez en ligne depuis un moment déjà. 
                     </div>
                     <img src="{{asset("images/Stars.jpg") }}" alt="star">              
                 </article>
@@ -66,14 +67,9 @@
                 <h2>Galerie des Stars - les Top vente !</h2>
 
                 <section class="diaporama">
-                    <img class="visible" src="{{asset("images/stars/JuliaRobert.jpg") }}" alt="julia Robert">
-                    <img src="{{asset("images/stars/actric4jpg.jpg") }}" alt="actrice4">
-                    <img src="{{asset("images/stars/will-smith.jpg") }}" alt="Will Smith">
-                    <img src="{{asset("images/stars/actrice2.jpg") }}" alt="actrice2">
-                    <img src="{{asset("images/stars/Dicaprio.jpg") }}" alt="Dicaprio">
-                    <img src="{{asset("images/stars/jeanDuJardin.jpg") }}" alt="Jean du Jardin">
-                    <img src="{{asset("images/stars/KitHarrington2.jpg") }}" alt="Kit Harrington">
-                    <img src="{{asset("images/stars/jeuderLaw.webp") }}" alt="Jeuder Law">
+                    {% for Celebrite in celebrites %}
+                    <img class="visible" src="{{Celebrite.image}}" alt="{{Celebrite.nom}}">
+                    {% endfor %}
                 </section>
 
 <!--3é section du main-->
@@ -86,7 +82,7 @@
                             consequuntur tenetur, accusantium doloremque animi nobis maxime atque 
                             
                     </div>
-                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+                    <img src="  " alt="star">              
                 </article>
 
                 <article>
@@ -110,7 +106,31 @@
                 </article>
             </section>
 
-<!--fin du main-->                                
+<!--footer--> 
+    <footer class="footer">
+            <div class="inner_footer">
+                <div class="social_links">
+                    <ul>
+                        <li class="social_items"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social_items"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social_items"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social_items"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="quick_links">
+                    <ul>
+                        <li class="quick_items"><a href="#">Home</a></li>
+                        <li class="quick_items"><a href="#">Tutorials</a></li>
+                        <li class="quick_items"><a href="#">Services</a></li>
+                        <li class="quick_items"><a href="#">About Us</a></li>
+                        <li class="quick_items"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div class="outer_footer">
+                    copyright &copy; 2021 Rent-The-Fame. All Rights Reserved - Conditions d'utilisation - Règle de Confidentialité
+            </div>
+        </footer>
     </main>   
 <!--footer-->
 
