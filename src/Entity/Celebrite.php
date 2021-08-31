@@ -100,6 +100,11 @@ class Celebrite
         return $this->fame;
     }
 
+    public function incrementFame()
+    {
+        $this->fame += 1;//$this->fame = $this->fame + 1;
+    }
+
     public function setFame(?int $fame): self
     {
         $this->fame = $fame;
