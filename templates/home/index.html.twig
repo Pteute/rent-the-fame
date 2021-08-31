@@ -31,6 +31,8 @@
     </header>
 
     <main id="home"> 
+   
+{{dump(celebrites)}}
 
 <!--1er section du main-->
             <section class="Stock">
@@ -68,7 +70,7 @@
 
                 <section class="diaporama">
                     {% for Celebrite in celebrites %}
-                    <img class="visible" src="{{Celebrite.image}}" alt="{{Celebrite.nom}}">
+                    <img class="visible" src="{{asset(Celebrite.image)}}" alt="{{Celebrite.nom}}">
                     {% endfor %}
                 </section>
 
@@ -78,11 +80,12 @@
                 <article>
                     <div>
                         <h3>Notre nouveauté</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem 
-                            consequuntur tenetur, accusantium doloremque animi nobis maxime atque 
-                            
+                            <h6>{{nouveaute.nom}} {{nouveaute.prenom}}</h6>
+                            <h6>Métier : {{nouveaute.metier}}</h6>
+                            <p>
+                            </p>
                     </div>
-                    <img src="  " alt="star">              
+                    <img src="{{asset(nouveaute.image)}}" alt="star">              
                 </article>
 
                 <article>
@@ -90,6 +93,7 @@
                         <h3>Notre Best Sellers</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing  elit. Accusamus rem 
                             consequuntur tenetur, cusantium  oloremque animi nobis maxime atque 
+                            </p>
                             
                     </div>
                     <img src="{{asset("images/Stars.jpg") }}" alt="star">             
@@ -98,11 +102,14 @@
                 <article>
                     <div>
                         <h3>Notre coup de coeur</h3>
+                            <h6>{{monCoupDeCoeur.nom}} {{monCoupDeCoeur.prenom}}</h6>
+                            <h6>Métier : {{monCoupDeCoeur.metier}}</h6>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem 
                             consequuntur tenetur, accusantium   doloremque animi nobis maxime atque
-                            
+                            </p>
                     </div>
-                    <img src="{{asset("images/Stars.jpg") }}" alt="star">              
+
+                    <img src="{{asset(monCoupDeCoeur.image) }}" alt="star">              
                 </article>
             </section>
 

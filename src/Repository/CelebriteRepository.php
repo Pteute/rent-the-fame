@@ -19,6 +19,12 @@ class CelebriteRepository extends ServiceEntityRepository
         parent::__construct($registry, Celebrite::class);
     }
 
+    public function findAllCelebrities(){
+        return $this->createQueryBuilder('c')
+        ->getQuery()
+        ->getArrayResult()
+        ;
+    }
     // /**
     //  * @return Celebrite[] Returns an array of Celebrite objects
     //  */
