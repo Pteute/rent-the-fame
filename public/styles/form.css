@@ -1,91 +1,91 @@
 /*Formulaire*/
-body{
-    width: 1060px;
-    margin:0 auto;
-    background: linear-gradient(113deg, rgba(25,120,153,.5) 35%, rgba(26,80,139,.5) 79%);
+body {
+  margin: 0 auto;
+  background: linear-gradient(
+    113deg,
+    rgba(25, 120, 153, 0.5) 35%,
+    rgba(26, 80, 139, 0.5) 79%
+  );
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-#user>div{
-    display: flex;
-    align-items: center;
-
+#user > div {
+  display: flex;
+  align-items: center;
 }
 
-#user{
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 30px;
-    color: black;
+#user {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  color: black;
 }
 
 label {
-    width: 200px;
+  width: 200px;
 }
 
-.email-field, 
-.password-field, 
-#user_nom, 
-#user_prenom, 
-#user_age, 
-#user_description{
-    width: 50%;
-    border:none;
-    background-color: rgba(255,255,255,.3);
-    margin: 2rem;
-    border-radius: 2rem;
-    padding: 0.5rem;
+.email-field,
+.password-field,
+#user_nom,
+#user_prenom,
+#user_age,
+#user_description {
+  width: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 2rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
 }
 
-
-#user_description{
-    border-radius: 0.5rem;
+#user_description {
+  border-radius: 0.5rem;
 }
 
-#user_genre{
-    margin: 2rem;
+#user_genre {
+  margin: 2rem;
 }
 
-.btn{
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 5px;
-    outline: none;
-    border:none;
-    margin-top: 40px;
-    width: 150px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
-    margin-left: 10vw;
-    margin-right: 10px;
-    background: #16293C;
-    color:#fff;
+.btn {
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-top: 40px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10px;
+  background: #16293c;
+  color: #fff;
 }
 
-.btn span{
-    position: relative;
-    z-index: 2;
-    color:#fff;
-    transition : color 0.3s ease-in-out;
+.btn span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
 }
 
-.btn::after{
-    content: "";
-    position: absolute;
-    background: #688DA1; 
-    color: black;   
-    width:100%;
-    height:100%;
-    top :0;
-    left:0;
-    transition : transform 0.3s ease-in-out;
+.btn::after {
+  content: "";
+  position: absolute;
+  background: #688da1;
+  color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
 }
-.btn:hover::after{
-    transform : translateY(100%);
+.btn:hover::after {
+  transform: translateY(100%);
 }
-
