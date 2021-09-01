@@ -227,3 +227,27 @@ main .Nouveaute article img{
     background: rgb(5, 60, 75);
     
 }
+
+/*Detail Celebrite*/
+.celebriteDescription article{
+    display: flex;
+    justify-content: center;
+}
+.celebriteDescription img{
+    width: 95%;
+    height: 90%;
+    object-fit: cover;
+}
+button{
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border:none;
+    margin-top: 40px;
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+    background: #688DA1; 
+    color: white; 
+}
