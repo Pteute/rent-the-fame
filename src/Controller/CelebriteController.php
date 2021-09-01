@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Celebrite;
 use App\Repository\CelebriteRepository;
+use App\Repository\MediasRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,6 +18,16 @@ class CelebriteController extends AbstractController
     {
         return $this->render('celebrite/index.html.twig', [
             'celebrite' => $celebrite,
+        ]);
+    }
+
+    #[Route('/celebrite/medias/{id}', name: 'mediascelebrite')]
+    public function medias($id, MediasRepository $mediasRepository)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $medias = $mediasRepository->findAllMedias($id);
+        return new JsonResponse([
+            "medias"   => $medias
         ]);
     }
 
@@ -46,8 +57,8 @@ class CelebriteController extends AbstractController
         }
         // $session->get('like');
         return new JsonResponse([
-            "message" => $message,
-            "type"    => $type
+            "message"   => $message,
+            "type"      => $type
         ]);
     }
 }

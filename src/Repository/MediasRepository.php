@@ -19,6 +19,14 @@ class MediasRepository extends ServiceEntityRepository
         parent::__construct($registry, Medias::class);
     }
 
+    public function findAllMedias($id)
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.celebrite = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getArrayResult();
+    }
     // /**
     //  * @return Medias[] Returns an array of Medias objects
     //  */
