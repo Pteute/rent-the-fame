@@ -30,10 +30,10 @@ function Medias(props) {
             <div className="mainMedias">
                 {props.data && props.data[actualMedia] && (
                     props.data[actualMedia].type === "youtube" ? (
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xpyrefzvTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        // <iframe src={props.data[actualMedia].url}></iframe>
+                        // <iframe width="560" height="315" src="https://www.youtube.com/embed/xpyrefzvTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src={props.data[actualMedia].url}></iframe>
                     ) : (
-                        <img src={`/${props.data[actualMedia].url}`} />
+                        <img src={props.data[actualMedia].url}/>
                     )
                 )}
             </div>
@@ -42,7 +42,7 @@ function Medias(props) {
                     {props.data.map((item, index) => {
                         return (
                             <li key={item.id} onClick={() => handleSelectMedia(index)}>
-                                <img src={item.type === "youtube" ? "/images/coeur2.jpg" : `/${item.url}`} />
+                                <img src={item.type === "youtube" ? "/images/coeur2.jpg" : item.url} />
                             </li>
                         )
                     })}
@@ -59,7 +59,7 @@ function LoveStar($id) {
     const [mesDatas, setMesDatas] = useState([]);
 
     useEffect(() => {
-        window.fetch(`/celebrite/medias/${idCelebrite}`)
+        window.fetch(idCelebrite)
             .then((response) => {
                 return response.json();
             })
