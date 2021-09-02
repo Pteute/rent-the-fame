@@ -33,7 +33,11 @@ function Medias(props) {
                         // <iframe width="560" height="315" src="https://www.youtube.com/embed/xpyrefzvTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <iframe src={props.data[actualMedia].url}></iframe>
                     ) : (
+<<<<<<< Updated upstream
                         <img src={props.data[actualMedia].url}/>
+=======
+                        <img src={props.data[actualMedia].url} />
+>>>>>>> Stashed changes
                     )
                 )}
             </div>
@@ -83,7 +87,7 @@ function LoveStar($id) {
     const handlerequest = () => {
 
 
-        window.fetch(`/celebrite/fame/${idCelebrite}`)
+        window.fetch(idCelebrite)
             .then((response) => {
                 return response.json();
             })
