@@ -8,7 +8,7 @@
 // any CSS you import will output into a single css file (app.css in this case)
 // import './styles/app.css';
 import 'react-notifications/lib/notifications.css';
-import './style.css';
+import './style/app.css';
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { NotificationContainer, NotificationManager } from 'react-notifications';

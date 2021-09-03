@@ -1,4 +1,8 @@
-<link rel="stylesheet" href="{{ asset("styles/form.css") }}">
+{% block stylesheets %}
+	{{parent()}}
+	{{ encore_entry_link_tags('form') }}
+{% endblock %}
+
 {{ form_start(form) }}
     {{ form_widget(form) }}
     <button class="btn"><span>{{ button_label|default('Save') }}</span></button>
