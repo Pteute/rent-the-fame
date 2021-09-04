@@ -7,101 +7,118 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 // import './styles/app.css';
-import 'react-notifications/lib/notifications.css';
-import './style/app.css';
-import React, { useState, useEffect } from "react";
+
+import "react-notifications/lib/notifications.css";
+import "./style/app.css";
+
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+import React, { useEffect, useState } from "react";
+
+import { ParallaxProvider } from "react-scroll-parallax";
 import ReactDOM from "react-dom";
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import StarsListParallax from "./StarsListParallax";
+
 // start the Stimulus application
 // import './bootstrap';
 
-
 function Medias(props) {
-    // const clickImage = () => { };
-    console.log(props);
-    const [actualMedia, setActualMedia] = useState(0);
-    const handleSelectMedia = (index) => {
-        console.log(index);
-        setActualMedia(index);
-    }
-    return (
-        // <image onClick={clickImage}></image>
-        <div className="parentMedias">
-            <div className="mainMedias">
-                {props.data && props.data[actualMedia] && (
-                    props.data[actualMedia].type === "youtube" ? (
-                        // <iframe width="560" height="315" src="https://www.youtube.com/embed/xpyrefzvTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe src={props.data[actualMedia].url}></iframe>
-                    ) : (
-                        <img src={props.data[actualMedia].url}/>
-                    )
-                )}
-            </div>
-            <div className="listMedias">
-                <ul>
-                    {props.data.map((item, index) => {
-                        return (
-                            <li key={item.id} onClick={() => handleSelectMedia(index)}>
-                                <img src={item.type === "youtube" ? "/images/coeur2.jpg" : item.url} />
-                            </li>
-                        )
-                    })}
-                </ul>
-            </div>
-        </div>
-    )
+  // const clickImage = () => { };
+  console.log(props);
+  const [actualMedia, setActualMedia] = useState(0);
+  const handleSelectMedia = (index) => {
+    console.log(index);
+    setActualMedia(index);
+  };
+  return (
+    // <image onClick={clickImage}></image>
+    <div className="parentMedias">
+      <div className="mainMedias">
+        {props.data &&
+          props.data[actualMedia] &&
+          (props.data[actualMedia].type === "youtube" ? (
+            // <iframe width="560" height="315" src="https://www.youtube.com/embed/xpyrefzvTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src={props.data[actualMedia].url}></iframe>
+          ) : (
+            <img src={props.data[actualMedia].url} />
+          ))}
+      </div>
+      <div className="listMedias">
+        <ul>
+          {props.data.map((item, index) => {
+            return (
+              <li key={item.id} onClick={() => handleSelectMedia(index)}>
+                <img
+                  src={
+                    item.type === "youtube" ? "/images/coeur2.jpg" : item.url
+                  }
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 function LoveStar($id) {
-    let pathname = window.location.pathname;
-    let idCelebrite = pathname.slice(pathname.lastIndexOf('/') + 1);
+  let pathname = window.location.pathname;
+  let idCelebrite = pathname.slice(pathname.lastIndexOf("/") + 1);
 
-    const [mesDatas, setMesDatas] = useState([]);
+  const [mesDatas, setMesDatas] = useState([]);
 
-    useEffect(() => {
-        window.fetch(idCelebrite)
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setMesDatas(data.medias);
-            })
+  useEffect(() => {
+    window
+      .fetch(idCelebrite)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setMesDatas(data.medias);
+      });
+  }, []);
 
-    }, []);
-
-    const showMessage = (message, type) => {
-        console.log('%c⧭', 'color: #00e600', type);
-        console.log('%c⧭', 'color: #ff0000', message);
-        if (type === "info") {
-            NotificationManager.info(message);
-        } else {
-            NotificationManager.error(message);
-
-        }
+  const showMessage = (message, type) => {
+    console.log("%c⧭", "color: #00e600", type);
+    console.log("%c⧭", "color: #ff0000", message);
+    if (type === "info") {
+      NotificationManager.info(message);
+    } else {
+      NotificationManager.error(message);
     }
+  };
 
-    const handlerequest = () => {
+  const handlerequest = () => {
+    window
+      .fetch(idCelebrite)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        showMessage(data.message, data.type);
+      });
+  };
+  return (
+    <div>
+      <button onClick={handlerequest}>J'aime</button>
+      <Medias data={mesDatas} />
 
-
-        window.fetch(idCelebrite)
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                showMessage(data.message, data.type);
-            })
-    }
-    return (
-        <div>
-            <button onClick={handlerequest}>J'aime</button>
-            <Medias data={mesDatas} />
-
-            <NotificationContainer />
-        </div>
-    )
+      <NotificationContainer />
+    </div>
+  );
 }
 if (document.getElementById("loveStar")) {
-    ReactDOM.render(<LoveStar />, document.getElementById("loveStar"));
-};
+  ReactDOM.render(<LoveStar />, document.getElementById("loveStar"));
+}
 
-
+if (document.getElementById("starsList")) {
+  ReactDOM.render(
+    <ParallaxProvider>
+      <StarsListParallax />
+    </ParallaxProvider>,
+    document.getElementById("starsList")
+  );
+}

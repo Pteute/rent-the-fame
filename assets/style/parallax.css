@@ -1,0 +1,15 @@
+body {
+  background-image: linear-gradient(45.34deg, #ea52f8 5.66%, #0066ff 94.35%);
+}
+.parallax-image{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important
+}
+/** Exemple de classe pour chaque image */
+.image_0 {
+  display: flex;
+  justify-content: start;
+}
+.image_1 {
+  display: flex;
+  justify-content: flex-end;
+}

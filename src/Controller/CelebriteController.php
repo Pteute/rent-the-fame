@@ -61,4 +61,19 @@ class CelebriteController extends AbstractController
             "type"      => $type
         ]);
     }
+
+    #[Route('/celebrite/list/parallax', name: 'celebrite_list')]
+    public function list(): Response
+    {
+        return $this->render('celebrite/list.html.twig', []);
+    }
+    #[Route('/celebrite/listrequest/all', name: 'celebrite_list_request')]
+    public function listRequest(CelebriteRepository $celebriteRepository)
+    {
+        return new JsonResponse(
+            [
+                "celebrities" => $celebriteRepository->findAllCelebrities()
+            ]
+        );
+    }
 }
