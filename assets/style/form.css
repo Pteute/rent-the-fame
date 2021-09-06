@@ -33,7 +33,7 @@ label {
 #user_nom,
 #user_prenom,
 #user_age,
-#user_description,{
+#user_description{
   width: 50%;
   border: none;
   background-color: rgba(255, 255, 255, 0.3);

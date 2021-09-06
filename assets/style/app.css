@@ -1,15 +1,60 @@
 * {
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0 auto;
-  padding-bottom: 50px;
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  min-height: 100%;
 }
 
-/* le header*/
+header {
+  background-color: #95998a;
+  height: 2rem;
+  display: flex;
+}
+
+main {
+  padding: 1rem;
+}
+
+footer {
+  
+}
+
+/** HEADER NAV **/
+header .logo {
+}
+
+header .logo img {
+  height: 100px;
+  margin-left: 1rem;
+}
+
+header nav .icones {
+  padding-left: 8rem;
+}
+
+header nav ul {
+  text-decoration: none;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+
+header nav a {
+  padding: 7px 25px;
+  justify-content: space-around;
+}
+
+header nav .menu ul li a {
+  color: black;
+}
+
+/** Typographie **/
 
 h1 {
   font-size: 3rem;
@@ -21,51 +66,45 @@ h3 {
   color: rgb(114, 138, 11);
 }
 
-header {
+/*home*/
+header#header-home {
   background-image: url("../images/Stars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0rem 0rem 2rem 2rem;
   padding-bottom: 13.5rem;
-  padding-top: 2rem;
-  margin-top: 2rem;
 }
 /*header section:first-child input {
     display: none;
 }*/
-
-header .first-child {
+/*
+header#header-home .first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header .first-child img {
-  height: 100px;
-  margin-left: 1rem;
-}
-
-header .first-child nav {
+header#header-home .first-child nav {
   width: 20%;
   color: #ecc400;
 }
 
-header .first-child nav ul {
+header#header-home .first-child nav ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
-header .first-child nav ul li a {
+header#header-home .first-child nav ul li a {
   color: #ecc400;
   text-decoration: none;
 }
 
-header .first-child nav ul li a i {
+header#header-home .first-child nav ul li a i {
   font-size: 25px;
 }
 
-header .last-child {
+header#header-home .last-child {
   flex-direction: column;
   text-align: center;
   font-style: italic;
@@ -75,16 +114,17 @@ header .last-child {
   color: rgb(114, 138, 11);
 }
 
-header .last-child p {
+header#header-home .last-child p {
   color: rgb(92, 3, 11);
   text-transform: uppercase;
   font-size: 18px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 1.5rem;
   text-align: justify;
-}
+}*/
 
 /*LE MAIN - les premiers articles*/
+
 main .Stock h2 {
   text-align: center;
 }
@@ -242,51 +282,49 @@ section.Nouveaute div.articleBas-entete h4.metier {
 }
 
 /*Detail Celebrite*/
-.celebriteDescription article{
-    display: flex;
-    justify-content: center;
+.celebriteDescription article {
+  display: flex;
+  justify-content: center;
 }
-.celebriteDescription img{
-    width: 95%;
-    height: 90%;
-    object-fit: cover;
+.celebriteDescription img {
+  width: 95%;
+  height: 90%;
+  object-fit: cover;
 }
-button{
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 5px;
-    outline: none;
-    border:none;
-    margin-top: 40px;
-    width: 150px;
-    cursor: pointer;
-    position: relative;
-    background: #688DA1; 
-    color: white; 
+button {
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-top: 40px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+  background: #688da1;
+  color: white;
 }
 
-.parentMedias{
+.parentMedias {
   display: flex;
   justify-content: center;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-.mainMedias{
+.mainMedias {
   background-color: blue;
   height: 35rem;
   width: 60rem;
   margin-bottom: 10rem;
-  
 }
-.listMedias{
+.listMedias {
   background-color: green;
   height: 35rem;
   width: 20rem;
   overflow-y: auto;
   /* margin-bottom: 10rem; */
 }
-
 
 @media (max-width: 920px) {
   main .moinsConnu,
@@ -298,13 +336,10 @@ button{
     width: 100%;
   }
 }
-.outer_footer{
-    padding: 10px;
-    text-align: center;
-    color: #ecc400; 
-    font-size: 18px;
-    background: rgb(5, 60, 75);
-    
-    
+.outer_footer {
+  padding: 10px;
+  text-align: center;
+  color: #ecc400;
+  font-size: 18px;
+  background: rgb(5, 60, 75);
 }
-
