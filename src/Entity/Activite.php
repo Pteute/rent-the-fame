@@ -39,6 +39,7 @@ class Activite
         $this->celebrites = new ArrayCollection();
     }
 
+
     public function getId(): ?int
     {
         return $this->id;

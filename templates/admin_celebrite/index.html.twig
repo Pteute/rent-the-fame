@@ -1,0 +1,49 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Celebrite index{% endblock %}
+
+{% block body %}
+    <h1>Celebrite index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Metier</th>
+                <th>Fame</th>
+                <th>Image</th>
+                <th>CreatedAt</th>
+                <th>ModifiedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for celebrite in celebrites %}
+            <tr>
+                <td>{{ celebrite.id }}</td>
+                <td>{{ celebrite.nom }}</td>
+                <td>{{ celebrite.prenom }}</td>
+                <td>{{ celebrite.metier }}</td>
+                <td>{{ celebrite.fame }}</td>
+                <td>        
+                    <img src="{{ asset("uploads/celebrite/" ~ celebrite.image) }}" alt="{{ celebrite.nom }}" width="100px" height="100px">
+                </td>
+                <td>{{ celebrite.createdAt ? celebrite.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ celebrite.modifiedAt ? celebrite.modifiedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('admin_celebrite_show', {'id': celebrite.id}) }}">show</a>
+                    <a href="{{ path('admin_celebrite_edit', {'id': celebrite.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_celebrite_new') }}">Create new</a>
+{% endblock %}
