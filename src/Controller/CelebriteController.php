@@ -14,7 +14,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class CelebriteController extends AbstractController
 
 {
-
     #[Route('/celebrites', name: 'celebrites')]
     public function liste(CelebriteRepository $celebriteRepository): Response
     {

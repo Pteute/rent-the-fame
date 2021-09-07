@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+	{{parent()}}
+	{{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+
 {% block title %}
 	{{celebrite.prenom}}
 	{{celebrite.nom}}
@@ -31,10 +37,10 @@
 				<div id="loveStar"></div>
 			</div>
 
-			<div>
+			<div class="contenu">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis molestiae minus ut, officia provident quo, ullam repudiandae culpa maxime dolore ipsum earum voluptatum? Magnam excepturi saepe rerum voluptas vero doloribus.</p>
 				<h3>Activités</h3>
-				<button>Louer</button>
+				<button class="btn"><span>Louer</span></button>
 			</div>
 		</article>
 

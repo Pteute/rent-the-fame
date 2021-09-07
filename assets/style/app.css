@@ -316,25 +316,57 @@ section.Nouveaute div.articleBas-entete h4.metier {
 /*Detail Celebrite*/
 .celebriteDescription article {
   display: flex;
-  justify-content: center;
 }
+
 .celebriteDescription img {
-  width: 95%;
-  height: 90%;
+  width: 70%;
+  height: 38%;
   object-fit: cover;
 }
-button {
+.celebriteDescription .contenu{
+  padding-left: -5rem;
+}
+
+button,
+.btn {
   font-size: 18px;
   padding: 15px;
   border-radius: 5px;
   outline: none;
   border: none;
   margin-top: 40px;
+  margin-bottom: 15px;
   width: 150px;
   cursor: pointer;
+  overflow: hidden;
   position: relative;
-  background: #688da1;
+  background: #16293C;
   color: white;
+}
+
+button span, 
+.btn span{
+  position: relative;
+  z-index: 2;
+  color:#fff;
+  transition : color 0.3s ease-in-out;
+}
+
+button::after,
+.btn::after{
+  content: "";
+    position: absolute;
+    background: #688da1;    
+    width:100%;
+    height:100%;
+    top :0;
+    left:0;
+    transition : transform 0.3s ease-in-out;
+}
+
+button:hover::after,
+.btn:hover::after{
+  transform : translateY(100%);
 }
 
 .parentMedias {
@@ -348,14 +380,12 @@ button {
   background-color: blue;
   height: 35rem;
   width: 60rem;
-  margin-bottom: 10rem;
 }
 .listMedias {
   background-color: green;
   height: 35rem;
   width: 20rem;
   overflow-y: auto;
-  /* margin-bottom: 10rem; */
 }
 
 @media (max-width: 920px) {

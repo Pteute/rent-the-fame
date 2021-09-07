@@ -1,110 +1,121 @@
-{% extends 'base.html.twig' %} {% block title %}Bienvenu sur Rent the Fame{%
-endblock %} {% block body %}
+{% extends 'base.html.twig' %}
 
-<!--1er section du main-->
-<section class="Stock">
-  <h2>Quand le rêve rejoint la réalité...</h2>
-</section>
-<!--2é section du main-->
-<section class="moinsConnu">
-  <article>
-    <!-- <div> -->
-    <h3>Les moins connues</h3>
-    <p>
-      Vous préférez les stars en début de carrière. Faites de cette rencontre
-      une expérience inoubliable aussi bien pour vous que pour elle en écrivant
-      une page de sa future carrière de people.
-    </p>
+{% block javascripts %}
+	{{parent()}}
+	{{ encore_entry_script_tags('home') }}
+{% endblock %}
 
-    <img src="{{ asset("images/JuliaRobert.jpg") }}" alt="star">
-    <!-- </div>-->
-  </article>
+{% block title %}Bienvenue sur Rent the Fame
+{% endblock %}
 
-  <article>
-    <!-- <div> -->
-    <h3>Les connues</h3>
-    <p>
-      Célébrités d'ici et d'ailleurs, mais l'embarras du choix ne vous fait pas
-      peur! Découvrez notre liste de personnalités du moment et passez enfin la
-      journée de vos rêves.
-    </p>
-    
-    <!-- </div> -->
+{% block body %}
 
-    <img src="{{ asset("images/Stars.jpg") }}" alt="star">
-  </article>
+	<!--1er section du main-->
+	<section class="Stock">
+		<h2>Quand le rêve rejoint la réalité...</h2>
+	</section>
+	<!--2é section du main-->
+	<section class="moinsConnu">
+		<article>
+			<!-- <div> -->
+			<h3>Les moins connues</h3>
+			<p>
+				Vous préférez les stars en début de carrière. Faites de cette rencontre
+				      une expérience inoubliable aussi bien pour vous que pour elle en écrivant
+				      une page de sa future carrière de people.
+			</p>
 
-  <article>
-    <!-- <div> -->
-    <h3>Les plus connues</h3>
-    <p>
-      On les apprécie pour leur charisme et leur personnalité, mais aussi parce
-      qu'elles font le buzz! Rencontrez cette star que vous suivez en ligne
-      depuis un moment déjà.
-    </p>
-    <!-- </div> -->
-    <img src="{{ asset("images/Stars.jpg") }}" alt="star">
-  </article>
-</section>
+			<img
+			src="{{ asset("images/stars/KitHarrington2.jpg") }}" alt="Kit Harrington">
+		<!-- </div>-->
+		</article>
 
-<h2>Galerie des Stars - les Top vente !</h2>
+		<article>
+			<!-- <div> -->
+			<h3>Les connues</h3>
+			<p>
+				Célébrités d'ici et d'ailleurs, mais l'embarras du choix ne vous fait pas
+				      peur! Découvrez notre liste de personnalités du moment et passez enfin la
+				      journée de vos rêves.
+			</p>
 
-<section class="diaporama">
-  {% for index, Celebrite in celebrites %}
-  <img
-    class="{{ index == 0 ? 'visible' : '' }}"
-    src="{{ asset(Celebrite.image) }}"
-    alt="{{ Celebrite.nom }}"
-  />
-  {% endfor %}
-</section>
+			<!-- </div> -->
 
-<!--3é section du main-->
+			<img src="{{ asset("images/stars/JuliaRobert.jpg") }}" alt="Julia Roberts">
+		</article>
 
-<section class="Nouveaute">
-  <article>
-    <!-- <div> -->
-    <h3>Notre nouveauté</h3>
-    <div class="articleBas-entete">
-      <h4>{{ nouveaute.nom }} {{ nouveaute.prenom }}</h4>
-      <h4 class="metier">{{ nouveaute.metier }}</h4>
-    </div>
-    <p>
-      Les destinations tendances du moment et les incontournables à tester avec
-      votre star. Découvrez notre sélection ici.
-    </p>
+		<article>
+			<!-- <div> -->
+			<h3>Les plus connues</h3>
+			<p>
+				On les apprécie pour leur charisme et leur personnalité, mais aussi parce
+				      qu'elles font le buzz! Rencontrez cette star que vous suivez en ligne
+				      depuis un moment déjà.
+			</p>
+			<!-- </div> -->
+			<img src="{{ asset("images/stars/will-smith.jpg") }}" alt="Wills smith">
+		</article>
+	</section>
 
-    <!-- </div> -->
-    <img src="{{ asset(nouveaute.image) }}" alt="star" />
-  </article>
+	<h2>Galerie des Stars - les Top vente !</h2>
 
-  <article>
-    <!-- <div> -->
-    <h3>Notre Best Sellers</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem
-      consequuntur tenetur, cusantium oloremque animi nobis maxime atque
-    </p>
+	<section class="diaporama">
+		{% for index, Celebrite in celebrites %}
+			<img class="{{ index == 0 ? 'visible' : '' }}" src="{{ asset(Celebrite.image) }}" alt="{{ Celebrite.nom }}"/>
+		{% endfor %}
+	</section>
 
-    <!-- </div> -->
-    <img src="{{ asset("images/Stars.jpg") }}" alt="star">
-  </article>
+	<!--3é section du main-->
 
-  <article>
-    <!-- <div> -->
-    <h3>Notre coup de coeur</h3>
-    <div class="articleBas-entete">
-      <h4>{{ monCoupDeCoeur.nom }} {{ monCoupDeCoeur.prenom }}</h4>
-      <h4 class="metier">{{ monCoupDeCoeur.metier }}</h4>
-    </div>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem
-      consequuntur tenetur, accusantium doloremque animi nobis maxime atque
-    </p>
-    <!-- </div> -->
+	<section class="Nouveaute">
+		<article>
+			<!-- <div> -->
+			<h3>Notre nouveauté</h3>
+			<div class="articleBas-entete">
+				<h4>{{ nouveaute.nom }}
+					{{ nouveaute.prenom }}</h4>
+				<h4 class="metier">{{ nouveaute.metier }}</h4>
+			</div>
+			<p>
+				Les destinations tendances du moment et les incontournables à tester avec
+				      votre star. Découvrez notre sélection ici.
+			</p>
 
-    <img src="{{ asset(monCoupDeCoeur.image) }}" alt="star" />
-  </article>
-</section>
+			<!-- </div> -->
+			<a href="{{ path ('celebrite', {id :nouveaute.id}) }}">
+				<img src="{{ asset(nouveaute.image) }}" alt="star"/>
+			</a>
+		</article>
 
+		<article>
+			<!-- <div> -->
+			<h3>Notre Best Sellers</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem
+				      consequuntur tenetur, cusantium oloremque animi nobis maxime atque
+			</p>
+
+			<!-- </div> -->
+			<img src="{{ asset("images/montagne.jpg") }}" alt="star">
+		</article>
+
+		<article>
+			<!-- <div> -->
+			<h3>Notre coup de coeur</h3>
+			<div class="articleBas-entete">
+				<h4>{{ monCoupDeCoeur.nom }}
+					{{ monCoupDeCoeur.prenom }}</h4>
+				<h4 class="metier">{{ monCoupDeCoeur.metier }}</h4>
+			</div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem
+				      consequuntur tenetur, accusantium doloremque animi nobis maxime atque
+			</p>
+			<!-- </div> -->
+			<a href="{{ path ('celebrite', {id :monCoupDeCoeur.id}) }}">
+				<img src="{{ asset(monCoupDeCoeur.image) }}" alt="star"/>
+			</a>
+		</article>
+	</section>
+  
 {% endblock %}

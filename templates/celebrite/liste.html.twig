@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 
@@ -22,12 +21,17 @@
 	<section class="celebrites">
 
 		{% for liste, celebrite in celebrites %}
-			<div class= "liste">
-                <img src="{{ asset(celebrite.image) }}" alt="{{ celebrite.nom }}">
-                <h3><strong>{{celebrite.prenom}} {{celebrite.nom}}</strong></h3>
+			<div class="liste">
+				<a href="{{ path ('celebrite', {id :celebrite.id}) }}">
+					<img src="{{ asset(celebrite.image) }}" alt="{{ celebrite.nom }}">
+				</a>
+				<h3>
+					<strong>{{celebrite.prenom}}
+						{{celebrite.nom}}</strong>
+				</h3>
 			</div>
 		{% endfor %}
 
 	</section>
 
-	{% endblock %}
+{% endblock %}

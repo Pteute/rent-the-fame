@@ -9,7 +9,6 @@
 // import './styles/app.css';
 import 'react-notifications/lib/notifications.css';
 import './style/app.css';
-
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
@@ -31,7 +30,6 @@ function Medias(props) {
             <div className="mainMedias">
                 {props.data && props.data[actualMedia] && (
                     props.data[actualMedia].type === "youtube" ? (
-                        // <iframe width="560" height="315" src="https://www.youtube.com/embed/xpyrefzvTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <iframe src={props.data[actualMedia].url}></iframe>
                     ) : (
                         <img src={props.data[actualMedia].url}/>
@@ -43,7 +41,7 @@ function Medias(props) {
                     {props.data.map((item, index) => {
                         return (
                             <li key={item.id} onClick={() => handleSelectMedia(index)}>
-                                <img src={item.type === "youtube" ? "/images/coeur2.jpg" : item.url} />
+                                <img src={item.type === "youtube" ? "/images/coeur2.jpg" : item.url}/>
                             </li>
                         )
                     })}
@@ -94,7 +92,7 @@ function LoveStar($id) {
     }
     return (
         <div>
-            <button onClick={handlerequest}>J'aime</button>
+            <button onClick={handlerequest}><span>J'aime</span></button>
             <Medias data={mesDatas} />
 
             <NotificationContainer />
