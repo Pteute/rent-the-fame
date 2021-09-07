@@ -10,8 +10,8 @@ body {
 }
 
 header {
-  background-color: #95998a;
-  height: 2rem;
+  height: 5rem;
+  margin-top: 1rem;
   display: flex;
 }
 
@@ -19,12 +19,19 @@ main {
   padding: 1rem;
 }
 
-footer {
-  
-}
 
 /** HEADER NAV **/
+
 header .logo {
+ flex: 0 1 auto;
+}
+header nav.menu {
+  flex: 1 1 auto;
+}
+
+header nav.icones {
+  flex: 0 1 auto;
+
 }
 
 header .logo img {
@@ -32,26 +39,36 @@ header .logo img {
   margin-left: 1rem;
 }
 
-header nav .icones {
-  padding-left: 8rem;
-}
-
 header nav ul {
   text-decoration: none;
+  text-align: center;
+  width: 100%;  
 }
 
 header nav ul li {
   display: inline-block;
 }
 
-
 header nav a {
   padding: 7px 25px;
   justify-content: space-around;
 }
 
-header nav .menu ul li a {
+
+header .menu li a {
   color: black;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+header .menu li a:hover {
+  text-decoration: underline;
+}
+
+header .icones ul li a {
+  color: #ecc400;
+  text-decoration: none;
+  
 }
 
 /** Typographie **/
@@ -68,12 +85,13 @@ h3 {
 
 /*home*/
 header#header-home {
-  background-image: url("../images/Stars.jpg");
+  background-image: url("../images/montagne.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 0rem 0rem 2rem 2rem;
-  padding-bottom: 13.5rem;
+  padding-bottom: 20rem;
+  background-position: -10% 60%;
 }
 /*header section:first-child input {
     display: none;
@@ -95,11 +113,9 @@ header#header-home .first-child nav ul {
   justify-content: space-around;
   list-style: none;
 }
-header#header-home .first-child nav ul li a {
-  color: #ecc400;
-  text-decoration: none;
-}
+*/
 
+/*
 header#header-home .first-child nav ul li a i {
   font-size: 25px;
 }
