@@ -12,7 +12,17 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CelebriteController extends AbstractController
+
 {
+
+    #[Route('/celebrites', name: 'celebrites')]
+    public function liste(CelebriteRepository $celebriteRepository): Response
+    {
+        return $this->render('celebrite/liste.html.twig',([
+            "celebrites" => $celebriteRepository->findAll()
+        ]));
+    }
+
     #[Route('/celebrite/{id}', name: 'celebrite')]
     public function index(Celebrite $celebrite): Response
     {

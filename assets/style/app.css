@@ -130,15 +130,19 @@ main .Stock h2 {
 }
 
 main .moinsConnu,
-.Nouveaute {
+.Nouveaute,
+.celebrites {
   display: flex;
   flex-direction: row;
-  /*justify-content: space-around;*/
+  flex-wrap: wrap;
   width: 100%;
   height: 70%;
 }
+
+
 main .moinsConnu article,
-main .Nouveaute article {
+main .Nouveaute article,
+.liste{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,17 +150,29 @@ main .Nouveaute article {
   width: 33%;
 }
 
+
 main .moinsConnu p,
 main .Nouveaute p {
   display: flex;
   flex: 1;
 }
+
 main .moinsConnu img,
-main .Nouveaute img {
+main .Nouveaute img, 
+.liste img {
   width: 90%;
   height: 20rem;
   object-fit: cover;
   border-radius: 2rem;
+}
+
+.liste img{
+  transition: all .4s ease-in-out;
+}
+
+.liste img:hover{
+  transition: all .4s ease-in-out;
+  transform: scale(1.12);
 }
 
 /* LE MAIN - DIAPORAMA*/
