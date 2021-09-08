@@ -1,0 +1,13 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Edit Medias{% endblock %}
+
+{% block body %}
+    <h1>Edit Medias</h1>
+
+    {{ include('admin_medias/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_medias_index') }}">back to list</a>
+
+    {{ include('admin_medias/_delete_form.html.twig') }}
+{% endblock %}
