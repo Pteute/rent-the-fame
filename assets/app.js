@@ -51,14 +51,15 @@ function Medias(props) {
     )
 }
 
-function LoveStar($id) {
+
+function LoveStar(id) {
     let pathname = window.location.pathname;
     let idCelebrite = pathname.slice(pathname.lastIndexOf('/') + 1);
 
     const [mesDatas, setMesDatas] = useState([]);
 
     useEffect(() => {
-        window.fetch(idCelebrite)
+        window.fetch(`/celebrite/medias/${idCelebrite}`)
             .then((response) => {
                 return response.json();
             })
@@ -82,7 +83,7 @@ function LoveStar($id) {
     const handlerequest = () => {
 
 
-        window.fetch(idCelebrite)
+        window.fetch(`/celebrite/fame/${idCelebrite}`)
             .then((response) => {
                 return response.json();
             })
