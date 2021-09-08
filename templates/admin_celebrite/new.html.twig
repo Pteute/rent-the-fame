@@ -1,0 +1,11 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}New Celebrite{% endblock %}
+
+{% block body %}
+    <h1>Create new Celebrite</h1>
+
+    {{ include('admin_celebrite/_form.html.twig') }}
+
+    <a href="{{ path('admin_celebrite_index') }}">back to list</a>
+{% endblock %}

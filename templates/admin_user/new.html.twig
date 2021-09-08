@@ -1,0 +1,11 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    <h1>{% if edit %}Modifier un user {% else %}Ajouter un user{% endif %}</h1>
+
+    {{ include('admin_user/_form.html.twig') }}
+
+    <a href="{{ path('admin_user_index') }}">back to list</a>
+{% endblock %}

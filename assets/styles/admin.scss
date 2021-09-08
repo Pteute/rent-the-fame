@@ -1,0 +1,10 @@
+/* styles/admin.scss */
+// customize some Bootstrap variables
+$red: #781225;
+//darken(#428bca, 20%);
+$green: #41fb3b;
+//Blue
+$blue: #2211A5;
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";

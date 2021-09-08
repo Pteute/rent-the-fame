@@ -54,6 +54,15 @@ class Celebrite
      */
     private $medias;
 
+    /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $modifiedAt;
 
 
     public function __construct()
@@ -159,6 +168,12 @@ class Celebrite
     /**
      * @return Collection|Medias[]
      */
+
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
     public function getMedias(): Collection
     {
         return $this->medias;
@@ -182,6 +197,30 @@ class Celebrite
                 $media->setCelebrite(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getModifiedAt(): ?\DateTimeImmutable
+    {
+        return $this->modifiedAt;
+    }
+
+    public function setModifiedAt(?\DateTimeImmutable $modifiedAt): self
+    {
+        $this->modifiedAt = $modifiedAt;
 
         return $this;
     }
