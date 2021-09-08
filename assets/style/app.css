@@ -11,7 +11,6 @@ body {
 
 header {
   height: 5rem;
-  margin-top: 1rem;
   display: flex;
 }
 
@@ -147,7 +146,8 @@ main .Stock h2 {
 
 main .moinsConnu,
 .Nouveaute,
-.celebrites {
+.celebrites, 
+.activites{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -175,18 +175,21 @@ main .Nouveaute p {
 
 main .moinsConnu img,
 main .Nouveaute img, 
-.liste img {
+.liste img,
+.celebriteActivités img{
   width: 90%;
   height: 20rem;
   object-fit: cover;
   border-radius: 2rem;
 }
 
-.liste img{
+.liste img,
+.celebriteActivités img{
   transition: all .4s ease-in-out;
 }
 
-.liste img:hover{
+.liste img:hover,
+.celebriteActivités img:hover{
   transition: all .4s ease-in-out;
   transform: scale(1.12);
 }
@@ -314,18 +317,25 @@ section.Nouveaute div.articleBas-entete h4.metier {
 }
 
 /*Detail Celebrite*/
-.celebriteDescription article {
+.celebriteDescription article, 
+.activiteDescription article {
   display: flex;
 }
 
-.celebriteDescription img {
-  width: 70%;
+.celebriteDescription img, 
+.activiteDescription img {
+  width: 60%;
   height: 38%;
   object-fit: cover;
 }
-.celebriteDescription .contenu{
-  padding-left: -5rem;
+.activiteDescription img{
+  object-fit: contain;
 }
+.celebriteDescription .contenu,
+.activiteDescription .contenu {
+  margin-left: -15rem;
+}
+
 
 button,
 .btn {
@@ -345,7 +355,7 @@ button,
 }
 
 button span, 
-.btn span{
+.btn span {
   position: relative;
   z-index: 2;
   color:#fff;
@@ -353,7 +363,7 @@ button span,
 }
 
 button::after,
-.btn::after{
+.btn::after {
   content: "";
     position: absolute;
     background: #688da1;    
@@ -376,17 +386,25 @@ button:hover::after,
   margin-left: auto;
   margin-right: auto;
 }
-.mainMedias {
-  background-color: blue;
+
+.mainMedias iframe, 
+.mainMedias img {
   height: 35rem;
   width: 60rem;
 }
 .listMedias {
-  background-color: green;
   height: 35rem;
-  width: 20rem;
+  width: 30rem;
   overflow-y: auto;
 }
+.listMedias ul li{
+  list-style: none;
+}
+
+.listMedias ul li{
+  object-fit: cover;
+}
+
 
 @media (max-width: 920px) {
   main .moinsConnu,

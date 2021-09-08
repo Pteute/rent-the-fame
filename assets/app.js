@@ -32,7 +32,7 @@ function Medias(props) {
                     props.data[actualMedia].type === "youtube" ? (
                         <iframe src={props.data[actualMedia].url}></iframe>
                     ) : (
-                        <img src={props.data[actualMedia].url}/>
+                        <img src={`/uploads/celebrite/${props.data[actualMedia].url}`}/>
                     )
                 )}
             </div>
@@ -41,7 +41,7 @@ function Medias(props) {
                     {props.data.map((item, index) => {
                         return (
                             <li key={item.id} onClick={() => handleSelectMedia(index)}>
-                                <img src={item.type === "youtube" ? "/images/coeur2.jpg" : item.url}/>
+                                <img src={item.type === "youtube" ? "/images/yt.png" : `/uploads/celebrite/${item.url}`}/>
                             </li>
                         )
                     })}
@@ -58,7 +58,7 @@ function LoveStar($id) {
     const [mesDatas, setMesDatas] = useState([]);
 
     useEffect(() => {
-        window.fetch(idCelebrite)
+        window.fetch(`/celebrite/medias/${idCelebrite}`)
             .then((response) => {
                 return response.json();
             })
@@ -82,7 +82,7 @@ function LoveStar($id) {
     const handlerequest = () => {
 
 
-        window.fetch(idCelebrite)
+        window.fetch(`/celebrite/fame/${idCelebrite}`)
             .then((response) => {
                 return response.json();
             })
@@ -99,6 +99,7 @@ function LoveStar($id) {
         </div>
     )
 }
+
 if (document.getElementById("loveStar")) {
     ReactDOM.render(<LoveStar />, document.getElementById("loveStar"));
 };
