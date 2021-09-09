@@ -1,7 +1,24 @@
-{% extends 'admin.html.twig' %} 
+{% extends 'admin.html.twig' %}
 
 {% block title %}Back office {% endblock %}
 
 {% block body %}
-<h1>Page d'accueil </h1>
+<main class="container-fluid">
+    <h1 class="text-center mt-5">Accueil :</h1>
+
+    <div class="d-flex justify-content-center align-items-center flex-wrap p-5">
+        <a href="{{ path('admin_celebrite_index') }}">
+            <img class="border border-5 rounded m-5" width="500px" height="500px" src="{{ asset("uploads/celebrite/LeonardoDicaprio2.jpg") }}" alt="">
+        </a>
+        <a href="{{ path('admin_user_index') }}">
+            <img class="border border-5 rounded m-5" width="500px" height="500px" src="{{ asset("images/userIcon.png") }}" alt="">
+        </a>
+        <a href="{{ path('admin_activite_index') }}">
+            <img class="border border-5 rounded m-5" width="500px" height="500px" src="{{ asset("images/activityIcon.png") }}" alt="">
+        </a>
+        <a href="{{ path('admin_medias_index') }}">
+            <img class="border border-5 rounded m-5" width="500px" height="500px" src="{{ asset("images/YoutubeIcon.png") }}" alt="">
+        </a>
+    </div>
+</main>
 {% endblock %}

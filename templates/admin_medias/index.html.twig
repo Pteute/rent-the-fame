@@ -12,7 +12,7 @@
                 <th>Type</th>
                 <th>Name</th>
                 <th>Url</th>
-                <th>actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,8 +24,8 @@
                 <td>{{ media.url }}</td>
                 <td>{{ media.celebrite.nom }}</td>
                 <td>
-                    <a href="{{ path('admin_medias_show', {'id': media.id}) }}">show</a>
-                    <a href="{{ path('admin_medias_edit', {'id': media.id}) }}">edit</a>
+                    <a class="btn btn-dark" href="{{ path('admin_medias_show', {'id': media.id}) }}">Voir</a>
+                    <a class="btn btn-dark" href="{{ path('admin_medias_edit', {'id': media.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -36,5 +36,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_medias_new') }}">Create new</a>
+    <a class="btn btn-dark" href="{{ path('admin_medias_new') }}">Ajouter</a>
 {% endblock %}

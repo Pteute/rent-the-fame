@@ -1,6 +1,6 @@
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn btn-success">{% if edit %}Modifier {% else %}Ajouter{% endif %}
+    <button class="btn btn-dark">{% if edit %}Modifier {% else %}Ajouter{% endif %}
         {# button_label|default('Save') #}</button>
 {{ form_end(form) }}

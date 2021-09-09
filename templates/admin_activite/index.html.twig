@@ -12,7 +12,7 @@
             <th>Nom</th>
             <th>Description</th>
             <th>Célébrités</th>
-            <th>Actions</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -26,8 +26,8 @@
                 {{ celebrite.nom }}
                 {% endfor %}
             <td>
-                <a href="{{ path('admin_activite_show', {'id': activite.id}) }}">show</a>
-                <a href="{{ path('admin_activite_edit', {'id': activite.id}) }}">edit</a>
+                <a class="btn btn-dark" href="{{ path('admin_activite_show', {'id': activite.id}) }}">Voir</a>
+                <a class="btn btn-dark" href="{{ path('admin_activite_edit', {'id': activite.id}) }}">Modifier</a>
             </td>
         </tr>
         {% else %}
@@ -38,5 +38,5 @@
     </tbody>
 </table>
 
-<a href="{{ path('admin_activite_new') }}">Create new</a>
+<a class="btn btn-dark" href="{{ path('admin_activite_new') }}">Ajouter</a>
 {% endblock %}

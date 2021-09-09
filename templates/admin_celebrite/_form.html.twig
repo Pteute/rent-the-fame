@@ -10,5 +10,5 @@
         <img src="{{ asset("uploads/celebrite/" ~ celebrite.image) }}" alt="{{ celebrite.nom }}" width="100px" height="100px"> 
 {% endif %}
 {{ form_row(form.activites) }}
-<button class="btn">{{ button_label|default('Save') }}</button>
+<button class="btn btn-dark">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
