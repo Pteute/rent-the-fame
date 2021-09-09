@@ -20,14 +20,11 @@
 		</h1>
 		<article>
 			<div>
-				<img
-				src="{{asset('uploads/celebrite/' ~ celebrite.image)}}" alt="{{asset(celebrite.prenom)}} {{asset(celebrite.nom)}}">
+				<img src="{{asset('uploads/celebrite/' ~ celebrite.image)}}" alt="{{asset(celebrite.prenom)}} {{asset(celebrite.nom)}}">
 				{# chemin mis ici avec concatenation de l'appel pck juste nom image dans bdd #}
-				<div id="loveStar"></div>
 			</div>
 
 			<div class="contenu">
-
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis molestiae minus ut, officia provident quo, ullam repudiandae culpa maxime dolore ipsum earum voluptatum? Magnam excepturi saepe rerum voluptas vero doloribus.</p>
 
 				<h3>Activités</h3>
@@ -40,13 +37,14 @@
 				<div><button class="btn">
 					<span>Louer</span>
 				</button></div>
+
 			</div>
-
-
 		</article>
-
-		<div id="mediasCelebrite"></div>
-		<div id="scrollMedias"></div>
+<!-- 
+	<div id="mediasCelebrite"></div>
+		<div id="scrollMedias"></div> -->
+		<!-- point d'entrée  -->
+	<div id="loveStar"></div> 
 	</section>
 
 {% endblock %}

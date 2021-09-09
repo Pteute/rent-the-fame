@@ -91,8 +91,8 @@ function LoveStar($id) {
             })
     }
     return (
-        <div>
-            <button onClick={handlerequest}><span>J'aime</span></button>
+        <div class="like">
+            <button  onClick={handlerequest}><span>J'aime</span></button>
             <Medias data={mesDatas} />
 
             <NotificationContainer />

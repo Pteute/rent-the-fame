@@ -176,7 +176,8 @@ main .Nouveaute p {
 main .moinsConnu img,
 main .Nouveaute img, 
 .liste img,
-.celebriteActivités img{
+.celebriteActivités img,
+.activiteDescription .celebrites{
   width: 90%;
   height: 20rem;
   object-fit: cover;
@@ -184,12 +185,14 @@ main .Nouveaute img,
 }
 
 .liste img,
-.celebriteActivités img{
+.celebriteActivités img,
+main .Nouveaute img {
   transition: all .4s ease-in-out;
 }
 
 .liste img:hover,
-.celebriteActivités img:hover{
+.celebriteActivités img:hover,
+main .Nouveaute img:hover {
   transition: all .4s ease-in-out;
   transform: scale(1.12);
 }
@@ -316,24 +319,23 @@ section.Nouveaute div.articleBas-entete h4.metier {
   background: rgb(5, 60, 75);
 }
 
-/*Detail Celebrite*/
+/*DETAIL CELEBRITE ET ACTIVITE*/
 .celebriteDescription article, 
 .activiteDescription article {
   display: flex;
+  flex-flow: wrap;
+  margin : 5rem;
+}
+.celebriteDescription article div{
+  flex: 0 0 50%;
 }
 
-.celebriteDescription img, 
-.activiteDescription img {
-  width: 60%;
-  height: 38%;
+.celebriteDescription img {
   object-fit: cover;
 }
-.activiteDescription img{
-  object-fit: contain;
-}
-.celebriteDescription .contenu,
-.activiteDescription .contenu {
-  margin-left: -15rem;
+
+.imageActivite{
+  width: 30%;
 }
 
 
@@ -379,6 +381,11 @@ button:hover::after,
   transform : translateY(100%);
 }
 
+div .like button {
+  display: block;
+  margin-left : 5rem;
+
+}
 .parentMedias {
   display: flex;
   justify-content: center;
@@ -401,7 +408,8 @@ button:hover::after,
   list-style: none;
 }
 
-.listMedias ul li{
+.listMedias ul li img{
+  width: 50%;
   object-fit: cover;
 }
 
