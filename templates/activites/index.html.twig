@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+	{{parent()}}
+	{{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+
+{% block title %}
+	{{activite.nom}}
+{% endblock %}
+
+{% block body %}
+
+
+	<section class="activiteDescription">
+		<h1>
+			{{activite.nom }}
+		</h1>
+		<article>
+			<div>
+				<img class="imageActivite"src="{{ asset("images/montagne2.jpg") }}" alt="{{asset(activite.nom)}}">
+			{# chemin mis ici avec concatenation de l'appel pck juste nom image dans bdd #}
+			</div>
+
+			<div class="contenu">
+				<p>
+					{{activite.description}}</p>
+			</div>
+		</article>
+
+		<article class="celebrites">
+			{# ici on va parcourir la collection de célébrités qui se trouve dans la table activité pour lui demander d'afficher pour chaque célébriter le champs qu'on veut#}
+			{% for liste, celebrite in activite.celebrites %}
+				<div class="liste">
+					<a href="{{ path ('celebrite', {id :celebrite.id}) }}">
+						<img src="{{ asset('uploads/celebrite/' ~ celebrite.image) }}" alt="{{ celebrite.nom }}">
+					</a>
+					<h3>
+						<strong>{{celebrite.prenom}}
+							{{celebrite.nom}}</strong>
+					</h3>
+				</div>
+			{% endfor %}
+		</article>
+	</section>
+
+{% endblock %}

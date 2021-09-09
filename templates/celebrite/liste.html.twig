@@ -4,12 +4,20 @@
 
 {% block body %}
 
+
 	<section class="celebrites">
 
 		{% for liste, celebrite in celebrites %}
-			<div class= "liste">
-                <img src="{{ asset('uploads/celebrite/' ~ celebrite.image) }}" alt="{{ celebrite.nom }}">
-                <h3><strong>{{celebrite.prenom}} {{celebrite.nom}}</strong></h3>
+			<div class="liste">
+				<a href="{{ path ('celebrite', {id :celebrite.id}) }}">
+					<img src="{{ asset('uploads/celebrite/' ~ celebrite.image) }}" alt="{{ celebrite.nom }}">
+				</a>
+				<h3>
+					<strong>{{celebrite.prenom}}
+						{{celebrite.nom}}</strong>
+				</h3>
+
+				<h4 class="metier">{{ celebrite.metier }}</h4>
 			</div>
 		{% endfor %}
 

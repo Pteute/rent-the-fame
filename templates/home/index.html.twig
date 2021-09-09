@@ -21,13 +21,13 @@
 			<h3>Les moins connues</h3>
 			<p>
 				Vous préférez les stars en début de carrière. Faites de cette rencontre
-				      une expérience inoubliable aussi bien pour vous que pour elle en écrivant
-				      une page de sa future carrière de people.
+				une expérience inoubliable aussi bien pour vous que pour elle en écrivant
+				une page de sa future carrière de people.
 			</p>
-
-			<img
-			src="{{ asset("images/stars/KitHarrington2.jpg") }}" alt="Kit Harrington">
-		<!-- </div>-->
+			
+			<img src="{{ asset("uploads/celebrite/KitHarrington2.jpg") }}" alt="Kit Harrington">
+			
+			<!-- </div>-->
 		</article>
 
 		<article>
@@ -35,13 +35,13 @@
 			<h3>Les connues</h3>
 			<p>
 				Célébrités d'ici et d'ailleurs, mais l'embarras du choix ne vous fait pas
-				      peur! Découvrez notre liste de personnalités du moment et passez enfin la
-				      journée de vos rêves.
+				peur! Découvrez notre liste de personnalités du moment et passez enfin la
+				journée de vos rêves.
 			</p>
 
 			<!-- </div> -->
 
-			<img src="{{ asset("images/stars/JuliaRobert.jpg") }}" alt="Julia Roberts">
+			<img src="{{ asset("uploads/celebrite/JuliaRobert.jpg") }}" alt="Julia Roberts">
 		</article>
 
 		<article>
@@ -49,19 +49,19 @@
 			<h3>Les plus connues</h3>
 			<p>
 				On les apprécie pour leur charisme et leur personnalité, mais aussi parce
-				      qu'elles font le buzz! Rencontrez cette star que vous suivez en ligne
-				      depuis un moment déjà.
+				qu'elles font le buzz! Rencontrez cette star que vous suivez en ligne
+				depuis un moment déjà.
 			</p>
 			<!-- </div> -->
-			<img src="{{ asset("images/stars/will-smith.jpg") }}" alt="Wills smith">
+			<img src="{{ asset("uploads/celebrite/will-smith.jpg") }}" alt="Wills smith">
 		</article>
 	</section>
 
 	<h2>Galerie des Stars - les Top vente !</h2>
 
 	<section class="diaporama">
-		{% for index, Celebrite in celebrites %}
-			<img class="{{ index == 0 ? 'visible' : '' }}" src="{{ asset(Celebrite.image) }}" alt="{{ Celebrite.nom }}"/>
+		{% for index, celebrite in celebrites %}
+			<img class="{{ index == 0 ? 'visible' : '' }}" src="{{ asset('uploads/celebrite/' ~ celebrite.image) }}" alt="{{ celebrite.nom }}"/>
 		{% endfor %}
 	</section>
 
@@ -78,12 +78,12 @@
 			</div>
 			<p>
 				Les destinations tendances du moment et les incontournables à tester avec
-				      votre star. Découvrez notre sélection ici.
+				votre star. Découvrez notre sélection ici.
 			</p>
 
 			<!-- </div> -->
 			<a href="{{ path ('celebrite', {id :nouveaute.id}) }}">
-				<img src="{{ asset(nouveaute.image) }}" alt="star"/>
+				<img src="{{ asset('uploads/celebrite/' ~ nouveaute.image) }}" alt="star"/>
 			</a>
 		</article>
 
@@ -92,7 +92,7 @@
 			<h3>Notre Best Sellers</h3>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem
-				      consequuntur tenetur, cusantium oloremque animi nobis maxime atque
+				consequuntur tenetur, cusantium oloremque animi nobis maxime atque
 			</p>
 
 			<!-- </div> -->
@@ -109,13 +109,13 @@
 			</div>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem
-				      consequuntur tenetur, accusantium doloremque animi nobis maxime atque
+				consequuntur tenetur, accusantium doloremque animi nobis maxime atque
 			</p>
 			<!-- </div> -->
 			<a href="{{ path ('celebrite', {id :monCoupDeCoeur.id}) }}">
-				<img src="{{ asset(monCoupDeCoeur.image) }}" alt="star"/>
+				<img src="{{ asset('uploads/celebrite/' ~ monCoupDeCoeur.image) }}" alt="star"/>
 			</a>
 		</article>
 	</section>
-  
+
 {% endblock %}

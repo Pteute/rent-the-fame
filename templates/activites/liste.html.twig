@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les activités{% endblock %}
+
+{% block body %}
+
+
+
+	<section class="activites">
+
+		{% for liste, activite in activites %}
+			<div class="liste">
+				<a href="{{ path ('activite', {id :activite.id}) }}">
+					<img src="{{ asset("images/montagne2.jpg") }}" alt="{{ activite.nom }}">
+				</a>
+				<h3>
+					<strong>{{activite.nom}}</strong>
+				</h3>
+			</div>
+		{% endfor %}
+
+	</section>
+
+{% endblock %}
