@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?nypl10');
+  src:  url('../fonts/icomoon.eot?nypl10#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?nypl10') format('truetype'),
+    url('../fonts/icomoon.woff?nypl10') format('woff'),
+    url('../fonts/icomoon.svg?nypl10#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-image:before {
+  font-size: 20rem;
+  color: #eb2f06;
+  content: "\e900";
+}
+.icon-user:before {
+  font-size: 20rem;
+  color: #1e3799;
+  content: "\e901";
+}
+.icon-star-outline:before {
+  font-size: 20rem;
+  color: #f6b93b;
+  content: "\e902";
+}
+.icon-wine:before {
+  font-size: 20rem;
+  color: #b71540;
+  content: "\e903";
+}

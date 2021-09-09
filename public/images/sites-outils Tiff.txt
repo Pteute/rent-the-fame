@@ -1,0 +1,33 @@
+- Sans catégories
+- https://grid.malven.co/ existe aussi pour les flexbox
+- https://frontendchecklist.io/ pratique lors d'un gros projet
+- https://fonts.google.com/ on ne le présente plus :slight_smile:
+- https://neumorphism.io/ faire du néomorphisme en 2 secondes
+- https://designresourc.es/ regroupe une multitude de sites pratiques par thème
+- https://dev.to/thenerdydev/top-10-tools-for-web-design-39gb un regroupé d'outils
+- https://dev.to/kiranrajvjd/the-ultimate-web-developer-resources-list-200-resources-2gf5 comme le précédent mais en mieux :fire: 
+- https://creative-ressources.fr/ un site super utile fait par notre ami Hesediel
+- https://github.com/public-apis/public-apis un repo qui regroupe plein d'APIS gratuite sur plein de thèmes
+
+- SVG
+- https://app.haikei.app/ le meilleur
+- https://getwaves.io/ faire des waves
+- https://www.svgbackgrounds.com/ pour faire des backgrounds :wink:
+- https://coolbackgrounds.io/ encore un
+- https://www.flaticon.com/ pour moi le meilleur site d’icônes en svg
+
+- Couleurs
+- https://mycolor.space/ faire une palette à partir d'une couleur
+- https://uicolorpicker.com/ choisir des couleurs dans le même ton
+- https://coolors.co/generate générer une palette de couleur aléatoire
+- https://colorhunt.co/ un des sites les plus connus
+- https://color.adobe.com/fr/create/color-wheel un site un peu compliqué mais très pratique
+- https://colorable.jxnblk.com/ savoir si un texte est bien lisible sur un background en couleur
+- https://www.colorion.co/ palettes de couleur
+
+- Gradients ( dégradés )
+- https://mycolor.space/gradient faire un dégradé à partir d'une couleur
+- https://webgradients.com/ dégradés randoms
+- https://gradientbuttons.colorion.co/ faire des boutons avec des dégradés animés :fire: 
+- https://cssgradient.io/ faire des gradients très simplement
+- https://www.gradientmagic.com/ faire des backgrounds avec des dégradés
