@@ -332,6 +332,7 @@ section.Nouveaute div.articleBas-entete h4.metier {
 
 .celebriteDescription img {
   object-fit: cover;
+  width:90%;
 }
 
 .imageActivite{

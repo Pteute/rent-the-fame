@@ -16,11 +16,11 @@ class ActiviteType extends AbstractType
         $builder
         ->add('nom')
         ->add('description')
-            ->add('celebrites', EntityType::class, [
-                'class' => Celebrite::class,
-                'choice_label' => 'nom', 
-                'multiple' =>  true
-            ])
+        ->add('celebrites', EntityType::class, [
+            'class' => Celebrite::class,
+            'choice_label' => 'nom', 
+            'multiple' =>  true
+        ])
         ;
     }
 

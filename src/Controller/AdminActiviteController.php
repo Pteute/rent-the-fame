@@ -58,9 +58,12 @@ class AdminActiviteController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($activite);
+            $entityManager->flush();
+            dump($activite);
 
-            return $this->redirectToRoute('admin_activite_index', [], Response::HTTP_SEE_OTHER);
+           // return $this->redirectToRoute('admin_activite_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin_activite/edit.html.twig', [
