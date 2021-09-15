@@ -4,21 +4,29 @@
 
 {% block body %}
 
+<section class="activites">
 
+	{% for liste, activite in activites %}
+	<div class="liste">
+		<a href="{{ path ('activite', {id :activite.id}) }}"></a>
+		{% if activite.id == 8 %}
+		<a href="{{ path ('activite', {id :activite.id}) }}">
+			<img src="{{ asset("images/cuisine.jpg") }}" alt="{{ activite.nom }}"></a>
+		{% elseif activite.id == 9 %}
+		<a href="{{ path ('activite', {id :activite.id}) }}">
+			<img src="{{ asset("images/danceFloor.jpeg") }}" alt="{{ activite.nom }}"></a>
+		{% elseif activite.id == 10 %}
+		<a href="{{ path ('activite', {id :activite.id}) }}">
+			<img src="{{ asset("images/WAR.jpg") }}" alt="{{ activite.nom }}"></a>
+		{% else %}
+		<img src="{{ asset("images/montagne2.jpg") }}" alt="{{ activite.nom }}">
+		{% endif %}
+		<h3>
+			<strong>{{activite.nom}}</strong>
+		</h3>
+	</div>
+	{% endfor %}
 
-	<section class="activites">
-
-		{% for liste, activite in activites %}
-			<div class="liste">
-				<a href="{{ path ('activite', {id :activite.id}) }}">
-					<img src="{{ asset("images/montagne2.jpg") }}" alt="{{ activite.nom }}">
-				</a>
-				<h3>
-					<strong>{{activite.nom}}</strong>
-				</h3>
-			</div>
-		{% endfor %}
-
-	</section>
+</section>
 
 {% endblock %}

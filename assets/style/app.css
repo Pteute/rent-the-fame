@@ -1,3 +1,5 @@
+/*Palette de couleur : https://colorhunt.co/palette/f0e5cff7f6f2c8c6c64b6587*/
+
 * {
   box-sizing: border-box;
 }
@@ -10,27 +12,38 @@ body {
 }
 
 header {
-  height: 5rem;
+  height: rem;
   display: flex;
+  background-image: url("../images/montagne.jpg");
 }
 
 main {
   padding: 1rem;
 }
 
+img {
+  box-shadow: 1px -1px 65px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px -1px 65px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px -1px 65px 0px rgba(0, 0, 0, 0.75);
+  ;
+}
+
+.logoStar {
+  box-shadow: none;
+}
 
 /** HEADER NAV **/
 
 header .logo {
- flex: 0 1 auto;
+  flex: 0 1 auto;
 }
+
 header nav.menu {
   flex: 1 1 auto;
 }
 
 header nav.icones {
   flex: 0 1 auto;
-
 }
 
 header .logo img {
@@ -41,7 +54,7 @@ header .logo img {
 header nav ul {
   text-decoration: none;
   text-align: center;
-  width: 100%;  
+  width: 100%;
 }
 
 header nav ul li {
@@ -53,11 +66,10 @@ header nav a {
   justify-content: space-around;
 }
 
-
 header .menu li a {
   color: black;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.3); 
+  background-color: rgb(200, 198, 198);
 }
 
 header .menu li a:hover {
@@ -65,9 +77,8 @@ header .menu li a:hover {
 }
 
 header .icones ul li a {
-  color: #ecc400;
+  color: #F0E5CF;
   text-decoration: none;
-  
 }
 
 /** Typographie **/
@@ -79,12 +90,14 @@ h1 {
 
 h3 {
   margin-left: 1.5rem;
-  color: rgb(114, 138, 11);
+  color: #4B6587;
 }
 
 /*home*/
+
 header#header-home {
   background-image: url("../images/montagne.jpg");
+  /* background-image: url("../images/montagne.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -92,9 +105,15 @@ header#header-home {
   padding-bottom: 20rem;
   background-position: -10% 60%;
 }
+
+header#header-home ul li a {
+  color: #4B6587;
+}
+
 /*header section:first-child input {
     display: none;
 }*/
+
 /*
 header#header-home .first-child {
   display: flex;
@@ -146,8 +165,8 @@ main .Stock h2 {
 
 main .moinsConnu,
 .Nouveaute,
-.celebrites, 
-.activites{
+.celebrites,
+.activites {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -155,17 +174,15 @@ main .moinsConnu,
   height: 70%;
 }
 
-
 main .moinsConnu article,
 main .Nouveaute article,
-.liste{
+.liste {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   width: 33%;
 }
-
 
 main .moinsConnu p,
 main .Nouveaute p {
@@ -174,10 +191,10 @@ main .Nouveaute p {
 }
 
 main .moinsConnu img,
-main .Nouveaute img, 
+main .Nouveaute img,
 .liste img,
 .celebriteActivités img,
-.activiteDescription .celebrites{
+.activiteDescription .celebrites {
   width: 90%;
   height: 20rem;
   object-fit: cover;
@@ -202,7 +219,7 @@ main .Nouveaute img:hover {
 main h2 {
   text-align: center;
   margin-top: 2rem;
-  color: rgb(114, 138, 11);
+  color: #4B6587;
 }
 
 main .diaporama {
@@ -211,9 +228,9 @@ main .diaporama {
   max-height: calc(960px * 1280 / 1920);
   max-width: 960px;
   margin: 25px;
-  border: 10px solid rgb(128, 161, 7);
-  box-shadow: 0 0 7px 7px rgb(36, 9, 131);
-  background: rgb(59, 147, 173);
+  border: 3px solid #C8C6C6;
+  box-shadow: 0 0 7px 7px #C8C6C6;
+  background: #4B6587;
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -246,8 +263,9 @@ section.Nouveaute div.articleBas-entete {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 section.Nouveaute div.articleBas-entete h4.metier {
-  color: #4c4c4c;
+  color: #4B6587;
 }
 
 /* LE FOOTER*/
@@ -255,12 +273,13 @@ section.Nouveaute div.articleBas-entete h4.metier {
 .inner_footer {
   margin: 0;
   padding: 0;
-  background: rgb(59, 147, 173);
+  background: #4B6587;
 }
 
 .social_links {
   display: flex;
 }
+
 .social_links ul {
   padding: 10px;
   display: flex;
@@ -276,13 +295,13 @@ section.Nouveaute div.articleBas-entete h4.metier {
 .social_items a {
   padding: 10px 20px;
   font-size: 20px;
-  color: #ecc400;
+  color: #F0E5CF;
   transition: all 0.25s;
 }
 
-.social_items a:hover {
+/* .social_items a:hover {
   color: rgb(192, 223, 233);
-}
+} */
 
 .quick_links {
   display: flex;
@@ -303,45 +322,48 @@ section.Nouveaute div.articleBas-entete h4.metier {
   text-decoration: none;
   padding: 0px 15px;
   font-size: 16px;
-  color: #ecc400;
+  color: #F0E5CF;
   transition: all 0.25s;
 }
 
-.quick_items a:hover {
-  color: rgb(192, 223, 233);
+.quick_items a:hover,
+.social_items a:hover {
+  color: #C8C6C6;
 }
 
 .outer_footer {
   padding: 10px;
   text-align: center;
-  color: #ecc400;
+  color: #F0E5CF;
   font-size: 18px;
-  background: rgb(5, 60, 75);
+  background: #4B6587;
 }
 
 /*DETAIL CELEBRITE ET ACTIVITE*/
-.celebriteDescription article, 
+
+.celebriteDescription article,
 .activiteDescription article {
   display: flex;
   flex-flow: wrap;
-  margin : 5rem;
+  margin: 5rem;
 }
-.celebriteDescription article div{
+
+.celebriteDescription article div {
   flex: 0 0 50%;
 }
 
 .celebriteDescription img {
   object-fit: cover;
-  width:90%;
+  width: 90%;
 }
 
-.imageActivite{
-  width: 30%;
+.imageActivite {
+  width: 100%;
+  border-radius : 2rem;
+  margin : -1rem;
 }
 
-
-button,
-.btn {
+button, .btn {
   font-size: 18px;
   padding: 15px;
   border-radius: 5px;
@@ -353,40 +375,37 @@ button,
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  background: #16293C;
+  background: #C8C6C6;
   color: white;
 }
 
-button span, 
-.btn span {
+button span, .btn span {
   position: relative;
   z-index: 2;
-  color:#fff;
-  transition : color 0.3s ease-in-out;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
 }
 
-button::after,
-.btn::after {
+button::after, .btn::after {
   content: "";
-    position: absolute;
-    background: #688da1;    
-    width:100%;
-    height:100%;
-    top :0;
-    left:0;
-    transition : transform 0.3s ease-in-out;
+  position: absolute;
+  background: #4B6587;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
-button:hover::after,
-.btn:hover::after{
-  transform : translateY(100%);
+button:hover::after, .btn:hover::after {
+  transform: translateY(100%);
 }
 
 div .like button {
   display: block;
-  margin-left : 5rem;
-
+  margin-left: 5rem;
 }
+
 .parentMedias {
   display: flex;
   justify-content: center;
@@ -395,40 +414,39 @@ div .like button {
   margin-right: auto;
 }
 
-.mainMedias iframe, 
-.mainMedias img {
+.mainMedias iframe, .mainMedias img {
   height: 35rem;
   width: 60rem;
 }
+
 .listMedias {
   height: 35rem;
   width: 30rem;
   overflow-y: auto;
 }
-.listMedias ul li{
+
+.listMedias ul li {
   list-style: none;
 }
 
-.listMedias ul li img{
+.listMedias ul li img {
   width: 50%;
   object-fit: cover;
 }
 
-
 @media (max-width: 920px) {
-  main .moinsConnu,
-  main .Nouveaute {
+  main .moinsConnu, main .Nouveaute {
     flex-direction: column;
   }
-  main .moinsConnu article,
-  main .Nouveaute article {
+  main .moinsConnu article, main .Nouveaute article {
     width: 100%;
   }
 }
+
 .outer_footer {
   padding: 10px;
   text-align: center;
-  color: #ecc400;
+  color: #F0E5CF;
   font-size: 18px;
-  background: rgb(5, 60, 75);
+  background: #4B6587;
 }
